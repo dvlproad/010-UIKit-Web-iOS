@@ -1,0 +1,37 @@
+{
+  "name": "CJWebKit",
+  "version": "0.0.1",
+  "summary": "Web相关基础",
+  "homepage": "https://github.com/dvlproad/010-UIKit-Web-iOS",
+  "description": "- CJWebKit/UIViewController/CJBaseWebViewController： 基础的 WebViewController\n\n  A longer description of CJWebKit in Markdown format.\n\n  * Think: Why did you write this? What is the focus? What does it do?\n  * CocoaPods will be using this to generate tags, and improve search results.\n  * Try to keep it short, snappy and to the point.\n  * Finally, don't worry about the indent, CocoaPods strips it!",
+  "license": "MIT",
+  "authors": {
+    "dvlproad": ""
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source": {
+    "git": "https://github.com/dvlproad/010-UIKit-Web-iOS.git",
+    "tag": "CJWebKit_0.0.1"
+  },
+  "source_files": "CJWebKit/*.{h,m}",
+  "frameworks": "UIKit",
+  "requires_arc": true,
+  "subspecs": [
+    {
+      "name": "UIViewController",
+      "subspecs": [
+        {
+          "name": "CJBaseWebViewController",
+          "source_files": "CJWebKit/UIViewController/CJBaseWebViewController/**/*.{h,m}",
+          "dependencies": {
+            "Masonry": [],
+            "SVProgressHUD": [],
+            "CJBaseHelper/WebCJHelper": []
+          }
+        }
+      ]
+    }
+  ]
+}

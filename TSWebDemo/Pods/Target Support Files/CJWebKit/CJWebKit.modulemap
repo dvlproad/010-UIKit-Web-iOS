@@ -1,0 +1,6 @@
+framework module CJWebKit {
+  umbrella header "CJWebKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

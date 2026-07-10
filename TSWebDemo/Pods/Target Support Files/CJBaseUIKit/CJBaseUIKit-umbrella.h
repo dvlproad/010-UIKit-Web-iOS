@@ -1,0 +1,30 @@
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#else
+#ifndef FOUNDATION_EXPORT
+#if defined(__cplusplus)
+#define FOUNDATION_EXPORT extern "C"
+#else
+#define FOUNDATION_EXPORT extern
+#endif
+#endif
+#endif
+
+#import "UIColor+CJHex.h"
+#import "UIImage+CJCreate.h"
+#import "UIImage+CJFixOrientation.h"
+#import "UIImage+CJTransformSize.h"
+#import "UIImageCJCompressHelper.h"
+#import "CJImageTrimmedModel.h"
+#import "UIImageCJCutHelper.h"
+#import "UIImage+CJBase64.h"
+#import "UIImage+CJBlur.h"
+#import "UIImage+CJChangeColor.h"
+#import "UIImage+CJMakeCircle.h"
+#import "UIImage+CJRotateAngle.h"
+#import "UIImage+CJSplitImageIntoTwoParts.h"
+#import "UIImageCJCategory.h"
+
+FOUNDATION_EXPORT double CJBaseUIKitVersionNumber;
+FOUNDATION_EXPORT const unsigned char CJBaseUIKitVersionString[];
+

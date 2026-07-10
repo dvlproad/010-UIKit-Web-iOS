@@ -1,0 +1,93 @@
+{
+  "name": "TSDemo_Web",
+  "version": "0.0.1",
+  "summary": "网页Web演示示例",
+  "homepage": "https://gitee.com/dvlproad/010-UIKit-Web-iOS.git",
+  "license": {
+    "type": "Copyright",
+    "text": "              © 2008-2016 dvlproad. All rights reserved.\n"
+  },
+  "authors": {
+    "dvlproad": ""
+  },
+  "description": "-、演示示例\n\n                   A longer description of TSDemo_Web in Markdown format.\n\n                   * Think: Why did you write this? What is the focus? What does it do?\n                   * CocoaPods will be using this to generate tags, and improve search results.\n                   * Try to keep it short, snappy and to the point.\n                   * Finally, don't worry about the indent, CocoaPods strips it!",
+  "platforms": {
+    "ios": "9.0"
+  },
+  "swift_versions": "5.0",
+  "source": {
+    "git": "https://gitee.com/dvlproad/010-UIKit-Web-iOS.git",
+    "tag": "TSDemo_Web_0.0.1"
+  },
+  "frameworks": "UIKit",
+  "requires_arc": true,
+  "source_files": "TSDemo_Web/**/*.{h,m}",
+  "resource_bundles": {
+    "TSDemo_Web": [
+      "TSDemo_Web/**/*.xcassets",
+      "TSDemo_Web/**/*.{xib,png,jpg}"
+    ]
+  },
+  "dependencies": {
+    "CQDemoKit": [],
+    "CQDemoResource/Images": []
+  },
+  "subspecs": [
+    {
+      "name": "Main",
+      "source_files": "TSDemo_Web/Main/**/*.{h,m}",
+      "dependencies": {
+        "TSDemo_Web/DouyinUrlAnalyze": [],
+        "TSDemo_Web/RequestHTML": [],
+        "TSDemo_Web/OCJS": [],
+        "TSDemo_Web/H5ImgSetting": []
+      }
+    },
+    {
+      "name": "DouyinUrlAnalyze",
+      "source_files": "TSDemo_Web/DouyinUrlAnalyze/**/*.{h,m}",
+      "dependencies": {
+        "TSDemo_Web-Swift/DouyinUrlAnalyze": []
+      }
+    },
+    {
+      "name": "BaseWebViewController",
+      "source_files": "TSDemo_Web/0BaseWebViewController/**/*.{h,m}",
+      "dependencies": {
+        "Masonry": [],
+        "CJBaseUIKit/UIColor": [],
+        "CJWebKit/UIViewController/CJBaseWebViewController": [],
+        "CJBaseEffectKit/CJDataEmptyView": [],
+        "AFNetworking/Reachability": [],
+        "CJOverlayView": [],
+        "CJBaseHelper/AuthorizationCJHelper": [],
+        "CJPopupAction": []
+      }
+    },
+    {
+      "name": "RequestHTML",
+      "source_files": "TSDemo_Web/1RequestHTML/**/*.{h,m}",
+      "dependencies": {
+        "TSDemo_Web/BaseWebViewController": []
+      }
+    },
+    {
+      "name": "OCJS",
+      "source_files": "TSDemo_Web/2OCJS/**/*.{h,m}",
+      "dependencies": {
+        "TSDemo_Web/BaseWebViewController": []
+      }
+    },
+    {
+      "name": "H5ImgSetting",
+      "source_files": "TSDemo_Web/3H5ImgSetting/**/*.{h,m}",
+      "dependencies": {
+        "TSDemo_Web/BaseWebViewController": [],
+        "CJMedia/MySingleImagePickerController": [],
+        "CJFile/CJFileManager": [],
+        "CJBaseUIKit/UIImage": []
+      }
+    }
+  ],
+  "swift_version": "5.0"
+}
