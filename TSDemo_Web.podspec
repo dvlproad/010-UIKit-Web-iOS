@@ -1,7 +1,7 @@
-Pod::Spec.new do |s|
 	#验证方法1：pod lib lint TSDemo_Web.podspec --sources='https://github.com/CocoaPods/Specs.git,https://gitee.com/dvlproad/dvlproadSpecs' --allow-warnings --use-libraries --verbose
-  #验证方法2：pod lib lint TSDemo_Web.podspec --sources=master,dvlproad --allow-warnings --use-libraries --verbose
-  #提交方法： pod repo push dvlproad TSDemo_Web.podspec --sources=master,dvlproad --allow-warnings --use-libraries --verbose
+  #验证方法2：pod lib lint TSDemo_Web.podspec --sources=cocoapods,gitee-dvlproad-dvlproadspecs --allow-warnings --use-libraries --verbose
+  #提交方法： pod repo push gitee-dvlproad-dvlproadspecs TSDemo_Web.podspec --sources=cocoapods,gitee-dvlproad-dvlproadspecs --allow-warnings --use-libraries --verbose
+Pod::Spec.new do |s|
   s.name         = "TSDemo_Web"
   s.version      = "0.0.1"
   s.summary      = "网页Web演示示例"
@@ -44,12 +44,6 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
 
-
-  # TSDemo_Web
-  s.source_files = "TSDemo_Web/**/*.{h,m}"
-  s.resource_bundle = {
-    'TSDemo_Web' => ['TSDemo_Web/**/*.xcassets', 'TSDemo_Web/**/*.{xib,png,jpg}'] # TSDemo_Web 为生成boudle的名称，可以随便起，但要记住，库里要用
-  }
   #多个依赖就写多行
   s.dependency 'CQDemoKit'
   s.dependency 'CQDemoResource/Images'
@@ -91,23 +85,33 @@ Pod::Spec.new do |s|
   # 1. RequestHTML
   s.subspec 'RequestHTML' do |ss|
     ss.source_files = "TSDemo_Web/1RequestHTML/**/*.{h,m}"
-
+    ss.resource_bundle = {
+      'TSDemo_Web_RequestHTML' => ['TSDemo_Web/1RequestHTML/**/*.{png,html}'] # TSDemo_Web 为生成boudle的名称，可以随便起，但要记住，库里要用
+    }
+    
     ss.dependency 'TSDemo_Web/BaseWebViewController'
   end
   
   # 2. OCJS
   s.subspec 'OCJS' do |ss|
     ss.source_files = "TSDemo_Web/2OCJS/**/*.{h,m}"
-
+    ss.resource_bundle = {
+      'TSDemo_Web_OCJS' => ['TSDemo_Web/2OCJS/**/*.{png,html}']
+    }
+    
     ss.dependency 'TSDemo_Web/BaseWebViewController'
   end
   
   # 3. H5ImgSetting
   s.subspec 'H5ImgSetting' do |ss|
     ss.source_files = "TSDemo_Web/3H5ImgSetting/**/*.{h,m}"
+    
+    ss.resource_bundle = {
+      'TSDemo_Web_H5ImgSetting' => ['TSDemo_Web/3H5ImgSetting/**/*.{png,html}']
+    }
 
     ss.dependency 'TSDemo_Web/BaseWebViewController'
-    ss.dependency 'CJMedia/MySingleImagePickerController'
+    ss.dependency 'CQDemoKit/Demo_RipeView/ImagePicker'
     ss.dependency 'CJFile/CJFileManager'
     ss.dependency 'CJBaseUIKit/UIImage'
   end

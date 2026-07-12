@@ -8,6 +8,7 @@
 
 #import "JSOCViewController.h"
 #import <CQDemoKit/CJUIKitToastUtil.h>
+#import <CQDemoKit/UIImage+CQTSInFramework.h>
 
 @interface JSOCViewController () <WKScriptMessageHandler> {
     
@@ -22,7 +23,8 @@
     // Do any additional setup after loading the view.
     self.title = NSLocalizedString(@"JS调用OC", nil);
     
-    NSString *localHtmlUrl = [[NSBundle mainBundle] pathForResource:@"JSOC.html" ofType:nil];
+    NSBundle *resourceBundle = [NSBundle cqts_framework_resourceBundle:@"TSDemo_Web_OCJS" ocClassName:NSStringFromClass([self class])];
+    NSString *localHtmlUrl = [resourceBundle pathForResource:@"JSOC.html" ofType:nil];
     [self reloadLocalWebWithUrl:localHtmlUrl]; //加载本地网页
     
     WKUserContentController *userContentController = [self.webView configuration].userContentController;

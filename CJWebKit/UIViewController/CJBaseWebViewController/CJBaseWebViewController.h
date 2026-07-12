@@ -23,6 +23,8 @@
 
 #import "CJEmptyViewProtocol.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 ///只有实现CJEmptyViewProtocol中的方法才能显示空白时候的页面
 @interface CJBaseWebViewController : UIViewController <CJEmptyViewProtocol> {
     
@@ -54,3 +56,5 @@
 - (void)reloadLocalWebWithUrl:(NSString *)requestUrl;
 
 @end
+
+NS_ASSUME_NONNULL_END

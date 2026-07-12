@@ -8,6 +8,7 @@
 
 #import "OCJSViewController.h"
 #import <CQDemoKit/CQTSButtonFactory.h>
+#import <CQDemoKit/UIImage+CQTSInFramework.h>
 #import "AppInfo.h"
 
 @interface OCJSViewController () <WKUIDelegate, WKNavigationDelegate>
@@ -23,7 +24,8 @@
     
     //NSString *networkUrl = @"http://www.bbxpc.com/app_html/about_us/about.html";
     //self.networkUrl = networkUrl;
-    NSString *localHtmlUrl = [[NSBundle mainBundle] pathForResource:@"OCJS.html" ofType:nil];
+    NSBundle *resourceBundle = [NSBundle cqts_framework_resourceBundle:@"TSDemo_Web_OCJS" ocClassName:NSStringFromClass([self class])];
+    NSString *localHtmlUrl = [resourceBundle pathForResource:@"OCJS.html" ofType:nil];
     NSURL *localHtmlURL = [NSURL fileURLWithPath:localHtmlUrl];
     [self reloadLocalWebWithUrl:localHtmlUrl]; //加载本地网页
     

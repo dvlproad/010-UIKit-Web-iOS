@@ -7,13 +7,15 @@
 //
 
 #import "H5ImgSettingBaseViewController.h"
-#import <CJMedia/MySingleImagePickerController.h>
+#import <CQDemoKit/UIImage+CQTSInFramework.h>
+#import <CQDemoKit/CQTSMediaPickerViewController.h>
 #import <CJBaseUIKit/UIImage+CJTransformSize.h>
 #import <CJBaseUIKit/UIImage+CJBase64.h>
 
 @interface H5ImgSettingBaseViewController () <WKScriptMessageHandler> {
     
 }
+@property (nonatomic, strong) CQTSMediaPickerViewController *mediaPickerUtil;
 
 @end
 
@@ -24,7 +26,8 @@
     // Do any additional setup after loading the view.
     self.title = NSLocalizedString(@"H5的图片设置", nil);
     
-    NSString *localHtmlUrl = [[NSBundle mainBundle] pathForResource:@"H5ImgSetting.html" ofType:nil];
+    NSBundle *resourceBundle = [NSBundle cqts_framework_resourceBundle:@"TSDemo_Web_H5ImgSetting" ocClassName:NSStringFromClass([self class])];
+    NSString *localHtmlUrl = [resourceBundle pathForResource:@"H5ImgSetting.html" ofType:nil];
     [self reloadLocalWebWithUrl:localHtmlUrl]; //加载本地网页
     
     WKUserContentController *userContentController = [self.webView configuration].userContentController;
@@ -41,16 +44,23 @@
     }
 }
 
+- (CQTSMediaPickerViewController *)mediaPickerUtil {
+    if (_mediaPickerUtil == nil) {
+        __weak typeof(self) weakSelf = self;  // 弱引用 self
+        _mediaPickerUtil = [[CQTSMediaPickerViewController alloc] initWithOptions:CQTSPhotoMediaOptionImage imageSuccess:^(UIImage *image) {
+            __strong typeof(weakSelf) strongSelf = weakSelf;
+            [strongSelf dealOriginImage:image];
+        } videoSuccess:^(NSURL *videoURL) {
+            
+        } failure:^(NSError *) {
+            
+        }];
+    }
+    return _mediaPickerUtil;
+}
+
 - (void)showCamera {
-    MySingleImagePickerController *imagePickerController = [[MySingleImagePickerController alloc] init];
-    [imagePickerController pickImageFinishBlock:^(UIImage *image) {
-        [self dealOriginImage:image];
-    } pickVideoFinishBlock:^(UIImage *firstImage) {
-        
-    } pickCancelBlock:^{
-        
-    }];
-    [self presentViewController:imagePickerController animated:YES completion:nil];
+    [self.mediaPickerUtil chooseVideoFromSystem:self];
 }
 
 - (void)dealOriginImage:(UIImage *)originImage {

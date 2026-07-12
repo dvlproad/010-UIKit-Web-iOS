@@ -21,13 +21,6 @@
   },
   "frameworks": "UIKit",
   "requires_arc": true,
-  "source_files": "TSDemo_Web/**/*.{h,m}",
-  "resource_bundles": {
-    "TSDemo_Web": [
-      "TSDemo_Web/**/*.xcassets",
-      "TSDemo_Web/**/*.{xib,png,jpg}"
-    ]
-  },
   "dependencies": {
     "CQDemoKit": [],
     "CQDemoResource/Images": []
@@ -67,6 +60,11 @@
     {
       "name": "RequestHTML",
       "source_files": "TSDemo_Web/1RequestHTML/**/*.{h,m}",
+      "resource_bundles": {
+        "TSDemo_Web_RequestHTML": [
+          "TSDemo_Web/1RequestHTML/**/*.{png,html}"
+        ]
+      },
       "dependencies": {
         "TSDemo_Web/BaseWebViewController": []
       }
@@ -74,6 +72,11 @@
     {
       "name": "OCJS",
       "source_files": "TSDemo_Web/2OCJS/**/*.{h,m}",
+      "resource_bundles": {
+        "TSDemo_Web_OCJS": [
+          "TSDemo_Web/2OCJS/**/*.{png,html}"
+        ]
+      },
       "dependencies": {
         "TSDemo_Web/BaseWebViewController": []
       }
@@ -81,9 +84,14 @@
     {
       "name": "H5ImgSetting",
       "source_files": "TSDemo_Web/3H5ImgSetting/**/*.{h,m}",
+      "resource_bundles": {
+        "TSDemo_Web_H5ImgSetting": [
+          "TSDemo_Web/3H5ImgSetting/**/*.{png,html}"
+        ]
+      },
       "dependencies": {
         "TSDemo_Web/BaseWebViewController": [],
-        "CJMedia/MySingleImagePickerController": [],
+        "CQDemoKit/Demo_RipeView/ImagePicker": [],
         "CJFile/CJFileManager": [],
         "CJBaseUIKit/UIImage": []
       }

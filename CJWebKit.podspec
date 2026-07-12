@@ -1,5 +1,8 @@
+  #验证方法1：pod lib lint CJWebKit.podspec --sources='https://github.com/CocoaPods/Specs.git,https://gitee.com/dvlproad/dvlproadSpecs' --allow-warnings --use-libraries --verbose
+  #验证方法2：pod lib lint CJWebKit.podspec --sources=cocoapods,gitee-dvlproad-dvlproadspecs --allow-warnings --use-libraries --verbose
+  #提交方法： pod repo push gitee-dvlproad-dvlproadspecs CJWebKit.podspec --sources=cocoapods,gitee-dvlproad-dvlproadspecs --allow-warnings --use-libraries --verbose
+
 Pod::Spec.new do |s|
-  #验证方法：pod lib lint CJWebKit.podspec --allow-warnings --use-libraries --verbose
   s.name         = "CJWebKit"
   s.version      = "0.0.1"
   s.summary      = "Web相关基础"
