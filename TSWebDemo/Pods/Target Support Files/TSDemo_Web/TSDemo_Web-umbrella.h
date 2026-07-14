@@ -22,7 +22,6 @@
 #import "H5ImgSettingDataViewController.h"
 #import "H5ImgSettingPathViewController.h"
 #import "DemoCacheUtil.h"
-#import "DemoConstant.h"
 #import "DemoInfo.h"
 #import "TestDataModel.h"
 #import "TestDataUtil.h"

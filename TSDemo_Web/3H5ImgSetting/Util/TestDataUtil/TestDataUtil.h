@@ -13,8 +13,6 @@
 
 @interface TestDataUtil : NSObject
 
-+ (NSMutableArray<TestDataModel *> *)getTestDataModels;
-
 /** 提供测试数据给OpenCollectionViewController */
 + (NSMutableArray<CQDMSectionDataModel *> *)getTestSectionDataModels;
 

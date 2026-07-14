@@ -11,6 +11,7 @@
 #import <CQDemoKit/CQTSMediaPickerViewController.h>
 #import <CJBaseUIKit/UIImage+CJTransformSize.h>
 #import <CJBaseUIKit/UIImage+CJBase64.h>
+#import <CJBaseUIkit/UIImageCJCompressHelper.h>
 
 @interface H5ImgSettingBaseViewController () <WKScriptMessageHandler> {
     
@@ -64,7 +65,8 @@
 }
 
 - (void)dealOriginImage:(UIImage *)originImage {
-    NSData *compressImageData = [originImage cj_compressSizeWithMaxDataLength:40.0f * 1024.0f]; //40k
+    //NSData *compressImageData = [originImage cj_compressSizeWithMaxDataLength:40.0f * 1024.0f]; //40k
+    NSData *compressImageData = [UIImageCJCompressHelper compressImage:originImage withLastPossibleSize:originImage.size maxDataLength:40.0f * 1024.0f]; //40k
     NSLog(@"压缩后数据大小:%.4f MB",(double)compressImageData.length/1024.0f/1024.0f);
     [self updateH5Img:compressImageData];
 }
