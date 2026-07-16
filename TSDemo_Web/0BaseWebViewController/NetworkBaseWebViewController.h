@@ -7,12 +7,12 @@
 //
 
 #import "CJBaseWebViewController.h"
-#import <CJBaseEffectKit/CJDataEmptyView.h>
+#import <CQDemoKit/CQTSDataEmptyView.h>
 
 
 @interface NetworkBaseWebViewController : CJBaseWebViewController
 
-@property (nonatomic, strong) CJDataEmptyView *emptyView;
+@property (nonatomic, strong) CQTSDataEmptyView *emptyView;
 @property (nonatomic, copy) NSString *networkUrl; /**< web的网络地址(附：本地的因为不需要emptyView,所以直接继承CJBaseWebViewController即可) */
 
 @end

@@ -10,7 +10,6 @@
 #endif
 #endif
 
-#import "AuthorizationCJHelper.h"
 #import "WebCJHelper.h"
 
 FOUNDATION_EXPORT double CJBaseHelperVersionNumber;

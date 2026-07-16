@@ -1,58 +1,11 @@
 PODS:
-  - AFNetworking/Reachability (4.0.1)
-  - CJBaseEffectKit/CJDataEmptyView (0.3.0):
-    - CJFoundation/NSString
-    - Masonry
-  - CJBaseHelper/AuthorizationCJHelper (0.1.8)
-  - CJBaseHelper/WebCJHelper (0.1.8)
+  - CJBaseHelper/WebCJHelper (0.2.0)
   - CJBaseUIKit-Swift/Color (0.0.2):
     - CJBaseUIKit-Swift/String
   - CJBaseUIKit-Swift/String (0.0.2)
-  - CJBaseUIKit/UIColor (0.8.1)
-  - CJBaseUIKit/UIImage (0.8.1)
-  - CJContainer (0.1.0):
-    - Masonry
+  - CJBaseUIKit/UIColor (0.9.0)
+  - CJBaseUIKit/UIImage (0.9.0)
   - CJFile/CJFileManager (0.0.9)
-  - CJFoundation/NSString (0.1.3)
-  - CJOverlayView (0.7.0):
-    - CJOverlayView/AlertView_Horizontal (= 0.7.0)
-    - CJOverlayView/AlertView_Image (= 0.7.0)
-    - CJOverlayView/AlertView_Normal (= 0.7.0)
-    - CJOverlayView/CJActionSheet (= 0.7.0)
-    - CJOverlayView/CJBaseOverlayTheme (= 0.7.0)
-    - CJOverlayView/CJProgressHUD (= 0.7.0)
-    - CJOverlayView/CJToast (= 0.7.0)
-  - CJOverlayView/AlertView_Horizontal (0.7.0):
-    - CJOverlayView/CJBaseOverlayTheme
-    - Masonry
-  - CJOverlayView/AlertView_Image (0.7.0):
-    - CJContainer
-    - SnapKit
-  - CJOverlayView/AlertView_Normal (0.7.0):
-    - CJOverlayView/CJBaseOverlayTheme
-    - Masonry
-  - CJOverlayView/CJActionSheet (0.7.0):
-    - CJOverlayView/CJBaseOverlayTheme
-    - Masonry
-  - CJOverlayView/CJBaseOverlayTheme (0.7.0)
-  - CJOverlayView/CJProgressHUD (0.7.0):
-    - CJOverlayView/CJProgressHUD/Base (= 0.7.0)
-    - CJOverlayView/CJProgressHUD/IndicatorProgressHUD (= 0.7.0)
-    - CJOverlayView/CJProgressHUD/JSONProgressHUD (= 0.7.0)
-  - CJOverlayView/CJProgressHUD/Base (0.7.0):
-    - CJOverlayView/CJBaseOverlayTheme
-  - CJOverlayView/CJProgressHUD/IndicatorProgressHUD (0.7.0):
-    - CJOverlayView/CJBaseOverlayTheme
-  - CJOverlayView/CJProgressHUD/JSONProgressHUD (0.7.0):
-    - CJOverlayView/CJBaseOverlayTheme
-    - CQBridgeSTOLottie
-    - Masonry
-    - MBProgressHUD
-  - CJOverlayView/CJToast (0.7.0):
-    - CJOverlayView/CJBaseOverlayTheme
-    - Masonry
-    - MBProgressHUD
-  - CJPopupAction (1.5.0)
   - CJWebKit (0.0.1):
     - CJWebKit/UIViewController (= 0.0.1)
   - CJWebKit/UIViewController (0.0.1):
@@ -61,83 +14,70 @@ PODS:
     - CJBaseHelper/WebCJHelper
     - Masonry
     - SVProgressHUD
-  - CQBridgeSTOLottie (0.3.0):
-    - lottie-ios
-  - CQDemoKit (0.9.3):
-    - CQDemoKit/Auxiliary (= 0.9.3)
-    - CQDemoKit/BaseUIKit (= 0.9.3)
-    - CQDemoKit/BaseUtil (= 0.9.3)
-    - CQDemoKit/BaseVC (= 0.9.3)
-    - CQDemoKit/Demo_DataSourceAndDelegate (= 0.9.3)
-    - CQDemoKit/Demo_Resource (= 0.9.3)
-    - CQDemoKit/Demo_RipeView (= 0.9.3)
-    - CQDemoKit/Helper (= 0.9.3)
-    - CQDemoKit/Monitor (= 0.9.3)
-  - CQDemoKit/Auxiliary (0.9.3):
+  - CQDemoKit/BaseUIKit (0.9.9):
     - Masonry
-  - CQDemoKit/BaseUIKit (0.9.3):
-    - Masonry
-  - CQDemoKit/BaseUtil (0.9.3)
-  - CQDemoKit/BaseVC (0.9.3):
-    - CQDemoKit/BaseVC/Base (= 0.9.3)
-    - CQDemoKit/BaseVC/Collection (= 0.9.3)
-    - CQDemoKit/BaseVC/ScrollView (= 0.9.3)
-    - CQDemoKit/BaseVC/TabBar (= 0.9.3)
-    - CQDemoKit/BaseVC/TableView (= 0.9.3)
-    - CQDemoKit/BaseVC/TextView (= 0.9.3)
-  - CQDemoKit/BaseVC/Base (0.9.3):
+  - CQDemoKit/BaseUtil (0.9.9)
+  - CQDemoKit/BaseVC (0.9.9):
+    - CQDemoKit/BaseVC/Base (= 0.9.9)
+    - CQDemoKit/BaseVC/Collection (= 0.9.9)
+    - CQDemoKit/BaseVC/ScrollView (= 0.9.9)
+    - CQDemoKit/BaseVC/TabBar (= 0.9.9)
+    - CQDemoKit/BaseVC/TableView (= 0.9.9)
+  - CQDemoKit/BaseVC/Base (0.9.9):
     - CQDemoKit/BaseUIKit
     - Masonry
-  - CQDemoKit/BaseVC/Collection (0.9.3):
+  - CQDemoKit/BaseVC/Collection (0.9.9):
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/BaseVC/ScrollView (0.9.3):
+  - CQDemoKit/BaseVC/ScrollView (0.9.9):
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/BaseVC/TabBar (0.9.3):
+  - CQDemoKit/BaseVC/TabBar (0.9.9):
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/TableView (0.9.3):
+  - CQDemoKit/BaseVC/TableView (0.9.9):
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/BaseVC/TextView (0.9.3):
-    - CQDemoKit/BaseUtil
-    - CQDemoKit/BaseVC/Base
-  - CQDemoKit/Demo_DataSourceAndDelegate (0.9.3):
+  - CQDemoKit/Demo_DataSourceAndDelegate (0.9.9):
     - CQDemoKit/BaseVC
-  - CQDemoKit/Demo_Resource (0.9.3):
-    - CQDemoKit/BaseUIKit
+  - CQDemoKit/Demo_Resource (0.9.9):
+    - CQDemoKit/Demo_Resource/GitUtil (= 0.9.9)
+    - CQDemoKit/Demo_Resource/ImageModel (= 0.9.9)
+    - CQDemoKit/Demo_Resource/InFramework (= 0.9.9)
+    - CQDemoKit/Demo_Resource/RandomUtil (= 0.9.9)
+    - CQDemoKit/Demo_Resource/ResourceInfoUtil (= 0.9.9)
+    - CQDemoKit/Demo_Resource/SandboxFileUtil (= 0.9.9)
+    - CQDemoKit/Demo_Resource/SandboxPathUtil (= 0.9.9)
+    - CQDemoKit/Demo_Resource/SandboxPhotoUtil (= 0.9.9)
+  - CQDemoKit/Demo_Resource/GitUtil (0.9.9)
+  - CQDemoKit/Demo_Resource/ImageModel (0.9.9)
+  - CQDemoKit/Demo_Resource/InFramework (0.9.9)
+  - CQDemoKit/Demo_Resource/RandomUtil (0.9.9)
+  - CQDemoKit/Demo_Resource/ResourceInfoUtil (0.9.9)
+  - CQDemoKit/Demo_Resource/SandboxFileUtil (0.9.9):
+    - CQDemoKit/Demo_Resource/SandboxPathUtil
     - CQDemoKit/Helper
-  - CQDemoKit/Demo_RipeView (0.9.3):
-    - CQDemoKit/BaseUIKit
-    - CQDemoKit/BaseUtil
-    - CQDemoKit/Demo_DataSourceAndDelegate
-    - CQDemoKit/Demo_Resource
-    - CQDemoKit/Demo_RipeView/ImagePicker (= 0.9.3)
-    - CQDemoKit/Demo_RipeView/RipeCollectionView (= 0.9.3)
-  - CQDemoKit/Demo_RipeView/ImagePicker (0.9.3):
-    - CQDemoKit/BaseUIKit
-    - CQDemoKit/BaseUtil
-    - CQDemoKit/Demo_DataSourceAndDelegate
-    - CQDemoKit/Demo_Resource
-    - Masonry
-  - CQDemoKit/Demo_RipeView/RipeCollectionView (0.9.3):
+  - CQDemoKit/Demo_Resource/SandboxPathUtil (0.9.9):
+    - CQDemoKit/Demo_Resource/ResourceInfoUtil
+  - CQDemoKit/Demo_Resource/SandboxPhotoUtil (0.9.9):
+    - CQDemoKit/Demo_Resource/ResourceInfoUtil
+  - CQDemoKit/Demo_RipeView/ImagePicker (0.9.9):
     - CQDemoKit/BaseUIKit
     - CQDemoKit/BaseUtil
     - CQDemoKit/Demo_DataSourceAndDelegate
     - CQDemoKit/Demo_Resource
     - Masonry
-  - CQDemoKit/Helper (0.9.3)
-  - CQDemoKit/Monitor (0.9.3)
-  - CQDemoResource/Core (0.2.3):
+  - CQDemoKit/Helper (0.9.9)
+  - CQDemoKit/StateUI (0.9.9):
+    - Masonry
+  - CQDemoResource/Core (0.2.9):
     - CQDemoKit/Demo_Resource
-  - CQDemoResource/Images (0.2.3):
+  - CQDemoResource/Images (0.2.9):
     - CQDemoResource/Core
-  - lottie-ios (4.6.1)
   - Masonry (1.1.0)
-  - MBProgressHUD (1.2.0)
-  - SnapKit (5.7.1)
   - SVProgressHUD (2.3.1):
     - SVProgressHUD/Core (= 2.3.1)
   - SVProgressHUD/Core (2.3.1)
   - TSDemo_Web (0.0.1):
-    - CQDemoKit
+    - CQDemoKit/BaseUtil
+    - CQDemoKit/BaseVC
+    - CQDemoKit/StateUI
     - CQDemoResource/Images
     - TSDemo_Web/BaseWebViewController (= 0.0.1)
     - TSDemo_Web/DouyinUrlAnalyze (= 0.0.1)
@@ -150,69 +90,65 @@ PODS:
   - TSDemo_Web-Swift/DouyinUrlAnalyze (0.0.1):
     - CJBaseUIKit-Swift/Color
   - TSDemo_Web/BaseWebViewController (0.0.1):
-    - AFNetworking/Reachability
-    - CJBaseEffectKit/CJDataEmptyView
-    - CJBaseHelper/AuthorizationCJHelper
     - CJBaseUIKit/UIColor
-    - CJOverlayView
-    - CJPopupAction
     - CJWebKit/UIViewController/CJBaseWebViewController
-    - CQDemoKit
+    - CQDemoKit/BaseUtil
+    - CQDemoKit/BaseVC
+    - CQDemoKit/StateUI
     - CQDemoResource/Images
     - Masonry
   - TSDemo_Web/DouyinUrlAnalyze (0.0.1):
-    - CQDemoKit
+    - CQDemoKit/BaseUtil
+    - CQDemoKit/BaseVC
+    - CQDemoKit/StateUI
     - CQDemoResource/Images
     - TSDemo_Web-Swift/DouyinUrlAnalyze
   - TSDemo_Web/H5ImgSetting (0.0.1):
     - CJBaseUIKit/UIImage
     - CJFile/CJFileManager
-    - CQDemoKit
+    - CQDemoKit/BaseUtil
+    - CQDemoKit/BaseVC
     - CQDemoKit/Demo_RipeView/ImagePicker
+    - CQDemoKit/StateUI
     - CQDemoResource/Images
     - TSDemo_Web/BaseWebViewController
   - TSDemo_Web/Main (0.0.1):
-    - CQDemoKit
+    - CQDemoKit/BaseUtil
+    - CQDemoKit/BaseVC
+    - CQDemoKit/StateUI
     - CQDemoResource/Images
     - TSDemo_Web/DouyinUrlAnalyze
     - TSDemo_Web/H5ImgSetting
     - TSDemo_Web/OCJS
     - TSDemo_Web/RequestHTML
   - TSDemo_Web/OCJS (0.0.1):
-    - CQDemoKit
+    - CQDemoKit/BaseUtil
+    - CQDemoKit/BaseVC
+    - CQDemoKit/StateUI
     - CQDemoResource/Images
     - TSDemo_Web/BaseWebViewController
   - TSDemo_Web/RequestHTML (0.0.1):
-    - CQDemoKit
+    - CQDemoKit/BaseUtil
+    - CQDemoKit/BaseVC
+    - CQDemoKit/StateUI
     - CQDemoResource/Images
     - TSDemo_Web/BaseWebViewController
 
 DEPENDENCIES:
   - CJWebKit (from `../`)
-  - CQDemoKit/BaseVC (~> 0.9.3)
+  - CQDemoKit/BaseVC (~> 0.9.9)
   - TSDemo_Web (from `../`)
   - TSDemo_Web-Swift (from `../`)
 
 SPEC REPOS:
-  https://gitee.com/dvlproad/dvlproadSpecs:
-    - CJBaseEffectKit
-    - CJContainer
-    - CJOverlayView
-    - CQBridgeSTOLottie
   https://github.com/CocoaPods/Specs.git:
-    - AFNetworking
     - CJBaseHelper
     - CJBaseUIKit
     - CJBaseUIKit-Swift
     - CJFile
-    - CJFoundation
-    - CJPopupAction
     - CQDemoKit
     - CQDemoResource
-    - lottie-ios
     - Masonry
-    - MBProgressHUD
-    - SnapKit
     - SVProgressHUD
 
 EXTERNAL SOURCES:
@@ -224,28 +160,18 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
-  CJBaseEffectKit: df0d6d989de6363a14be9d5ebbb2a5e6b8b1588c
-  CJBaseHelper: 9a903eb83edd4e831e39c5112c6940e2559b79b7
-  CJBaseUIKit: 1445f55a4c9f942351fcd1964694f32196472837
+  CJBaseHelper: 0345964a15b24131605a356f62e8c61d56222002
+  CJBaseUIKit: 082b23d89703a9ff17f6b17f33c23569c2e67581
   CJBaseUIKit-Swift: 432f05b09106994c16a4cf582c6a728c3e59316e
-  CJContainer: b7d5d626a05691c9107ce57b5991ab5c066f86a3
   CJFile: 6c1e6d55b3b94e8afbaa9f413f131301d15fdc48
-  CJFoundation: 53b4df7152c6d6fd776f55f387c67f431b8574bd
-  CJOverlayView: 35ff284fb9a9b1a21e0a2f4cb24193ed72fb5215
-  CJPopupAction: 0f0a424a44b46d3582e0d4a90f14f15e70255436
-  CJWebKit: 804c315a308893a57b070b548f50c3cf50ccce5f
-  CQBridgeSTOLottie: 5e9bb0ab3b67570586d2ec5835c62e662e570371
-  CQDemoKit: 22fc91b3ab0b53b0de98e93eefe0c6778a211f2b
-  CQDemoResource: 03f43bda844a975c8923d175dc07c25019d96548
-  lottie-ios: 6467ca7035120c5b0e0acee58bb679cf15875686
+  CJWebKit: ac0dd014980369f23de04b0a31e54cacbf0b709f
+  CQDemoKit: 0ac1910c174d8d2b4b40367806dce17fe1804d8d
+  CQDemoResource: 2455f939bd1e4550446f88c3b78a508f35fd5147
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
-  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
   SVProgressHUD: 4837c74bdfe2e51e8821c397825996a8d7de6e22
-  TSDemo_Web: d12ac8c08bb20de8b864a71a5b25424b6dd8f4a4
+  TSDemo_Web: ccc4498da8661baeb48dece15ecd534cbc712a63
   TSDemo_Web-Swift: ab34b34615d221e75550aeeb644cf6ba2c40b098
 
-PODFILE CHECKSUM: a01254e0ca0d2ff8446a9df37cdcc6fbc1074b82
+PODFILE CHECKSUM: b794360d023b18280d19b797281e6c41dfd9f570
 
 COCOAPODS: 1.16.2

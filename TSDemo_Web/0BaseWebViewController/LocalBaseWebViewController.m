@@ -15,11 +15,23 @@
 
 @implementation LocalBaseWebViewController
 
++ (NSString *)systemAppVersion {
+    static NSString *appVersion = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        appVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    });
+    return appVersion;
+}
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = CJColorFromHexString(@"#f2f2f2");
 }
+
 
 /*
 #pragma mark - Navigation

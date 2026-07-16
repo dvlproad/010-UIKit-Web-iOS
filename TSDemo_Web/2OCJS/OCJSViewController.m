@@ -9,7 +9,6 @@
 #import "OCJSViewController.h"
 #import <CQDemoKit/CQTSButtonFactory.h>
 #import <CQDemoKit/UIImage+CQTSInFramework.h>
-#import "AppInfo.h"
 
 @interface OCJSViewController () <WKUIDelegate, WKNavigationDelegate>
 
@@ -31,7 +30,7 @@
     
     self.webViewDidFinishNavigationBlcok = ^(WKWebView *webView) {
         if ([localHtmlURL isEqual:webView.URL]) {
-            NSString *appVersion = [AppInfo systemAppVersion];
+            NSString *appVersion = [LocalBaseWebViewController systemAppVersion];
             NSString *jsString = [NSString stringWithFormat:@"setEdition('V%@')", appVersion];
             [webView evaluateJavaScript:jsString completionHandler:^(id _Nullable object, NSError * _Nullable error) {
                 NSLog(@"OC执行JS完成");
@@ -87,7 +86,7 @@
 }
 
 - (void)showWebAlert {
-    NSString *appVersion = [AppInfo systemAppVersion];
+    NSString *appVersion = [LocalBaseWebViewController systemAppVersion];
     NSString *jsString = [NSString stringWithFormat:@"showWebAlert('版本:%@')", appVersion];
     [self.webView evaluateJavaScript:jsString completionHandler:^(id _Nullable response, NSError * _Nullable error) {
         NSLog(@"OC执行JS完成--弹窗(需在WKUIDelegate中处理)");

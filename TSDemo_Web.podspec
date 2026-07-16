@@ -45,7 +45,9 @@ Pod::Spec.new do |s|
   # s.dependency "JSONKit", "~> 1.4"
 
   #多个依赖就写多行
-  s.dependency 'CQDemoKit'
+  s.dependency 'CQDemoKit/BaseVC'
+  s.dependency 'CQDemoKit/BaseUtil'
+  s.dependency 'CQDemoKit/StateUI'
   s.dependency 'CQDemoResource/Images'
 
   
@@ -75,11 +77,6 @@ Pod::Spec.new do |s|
     ss.dependency 'Masonry'
     ss.dependency 'CJBaseUIKit/UIColor'
     ss.dependency 'CJWebKit/UIViewController/CJBaseWebViewController'
-    ss.dependency 'CJBaseEffectKit/CJDataEmptyView'
-    ss.dependency 'AFNetworking/Reachability'
-    ss.dependency 'CJOverlayView'
-    ss.dependency 'CJBaseHelper/AuthorizationCJHelper'
-    ss.dependency 'CJPopupAction'
   end
   
   # 1. RequestHTML

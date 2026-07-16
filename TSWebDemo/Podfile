@@ -26,8 +26,7 @@ end
 
 
 target 'TSWebDemo' do
-  pod 'CQDemoKit',          '~> 0.9.3',      :subspecs => ['BaseVC']
-  
+  pod 'CQDemoKit',          '~> 0.9.9',      :subspecs => ['BaseVC']
   pod 'CJWebKit',         :path => '../'
   pod 'TSDemo_Web',       :path => '../'
   pod 'TSDemo_Web-Swift', :path => '../'

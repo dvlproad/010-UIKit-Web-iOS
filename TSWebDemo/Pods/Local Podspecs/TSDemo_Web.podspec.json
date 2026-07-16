@@ -22,7 +22,9 @@
   "frameworks": "UIKit",
   "requires_arc": true,
   "dependencies": {
-    "CQDemoKit": [],
+    "CQDemoKit/BaseVC": [],
+    "CQDemoKit/BaseUtil": [],
+    "CQDemoKit/StateUI": [],
     "CQDemoResource/Images": []
   },
   "subspecs": [
@@ -49,12 +51,7 @@
       "dependencies": {
         "Masonry": [],
         "CJBaseUIKit/UIColor": [],
-        "CJWebKit/UIViewController/CJBaseWebViewController": [],
-        "CJBaseEffectKit/CJDataEmptyView": [],
-        "AFNetworking/Reachability": [],
-        "CJOverlayView": [],
-        "CJBaseHelper/AuthorizationCJHelper": [],
-        "CJPopupAction": []
+        "CJWebKit/UIViewController/CJBaseWebViewController": []
       }
     },
     {

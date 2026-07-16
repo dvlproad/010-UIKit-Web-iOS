@@ -10,7 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LocalBaseWebViewController : CJBaseWebViewController
+@interface LocalBaseWebViewController : CJBaseWebViewController {
+    
+}
++ (NSString *)systemAppVersion;
 
 @end
 

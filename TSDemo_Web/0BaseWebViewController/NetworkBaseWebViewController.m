@@ -8,9 +8,7 @@
 
 #import "NetworkBaseWebViewController.h"
 #import <CJBaseUIKit/UIColor+CJHex.h>
-
-#import "DataEmptyViewFactory.h"
-#import "UIScrollView+CJAddFillView.h"
+#import <CQDemoKit/CQTSDataEmptyView.h>
 
 @interface NetworkBaseWebViewController ()
 
@@ -21,7 +19,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self reloadNetworkWebWithUrl:@"dd"];
+//    [self reloadNetworkWebWithUrl:@"dd"];
     //[self reloadNetworkWebWithUrl:self.networkUrl];
 }
 
@@ -42,23 +40,24 @@
         make.top.bottom.mas_equalTo(self.view);
     }];
     
-    [self setupShowEmptyViewBlock:^(NSString *message) {
-        self.emptyView.message = message;
-        self.emptyView.hidden = NO;
-        
-    } hideEmptyViewBlock:^{
-        self.emptyView.hidden = YES;
-    }];
+//    [self setupShowEmptyViewBlock:^(NSString *message) {
+//        self.emptyView.message = message;
+//        self.emptyView.hidden = NO;
+//        
+//    } hideEmptyViewBlock:^{
+//        self.emptyView.hidden = YES;
+//    }];
+    self.webView.hidden = YES;
 }
 
-- (CJDataEmptyView *)emptyView {
+- (CQTSDataEmptyView *)emptyView {
     if (_emptyView == nil) {
         __weak typeof(self)weakSelf = self;
-        _emptyView = [DataEmptyViewFactory networkEmptyViewWithSuccess:^{
+        _emptyView = [[CQTSDataEmptyView alloc] initWithReloadHandle:^(CQTSDataEmptyView *emptyView) {
             NSString *requestUrl = self.networkUrl;
             [weakSelf reloadNetworkWebWithUrl:requestUrl];
         }];
-        _emptyView.hidden = YES;
+//        _emptyView.hidden = YES;
     }
     
     return _emptyView;
