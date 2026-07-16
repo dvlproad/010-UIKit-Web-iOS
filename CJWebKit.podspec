@@ -37,10 +37,10 @@ Pod::Spec.new do |s|
 
   s.author   = { "dvlproad" => "" }
 
-  s.platform     = :ios, "8.0"
+  s.platform     = :ios, "10.0"
  
   s.source       = { :git => "https://github.com/dvlproad/010-UIKit-Web-iOS.git", :tag => "CJWebKit_0.0.1" }
-  s.source_files  = "CJWebKit/*.{h,m}"
+  # s.source_files  = "CJWebKit/*.{h,m}"
 
   s.frameworks = "UIKit"
 
